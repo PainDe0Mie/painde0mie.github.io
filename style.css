@@ -1,0 +1,92 @@
+:root {
+    --discord-dark: #313338;
+    --discord-black: #1E1F22;
+    --discord-card: #111214;
+    --discord-text: #DBDEE1;
+    --discord-muted: #B5BAC1;
+    --discord-blurple: #5865F2;
+    --discord-green: #23A559;
+}
+
+body {
+    margin: 0; padding: 0;
+    font-family: 'gg sans', 'Noto Sans', sans-serif;
+    background-color: var(--discord-dark);
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; overflow: hidden;
+}
+
+.video-background {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    z-index: -1;
+    filter: blur(10px) brightness(0.6);
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: var(--discord-card);
+    width: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.card-content { padding: 16px; position: relative; }
+
+.profile-header {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 92px; height: 92px;
+}
+
+.profile-img {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 6px solid var(--discord-card);
+    position: absolute;
+    top: 6px; left: 6px;
+}
+
+.avatar-decoration {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 10px; left: 0;
+    pointer-events: none;
+}
+
+.avatar-decoration img {
+    width: 100%; height: 100%;
+}
+
+.status-dot {
+    width: 16px; height: 16px;
+    background-color: var(--discord-green);
+    border-radius: 50%;
+    border: 4px solid var(--discord-card);
+    position: absolute;
+    bottom: 0px; right: 0px;
+    z-index: 2;
+}
+
+.info { margin-top: 45px; }
+h1 { font-size: 20px; color: white; margin: 0; }
+.username { font-size: 14px; color: var(--discord-muted); font-weight: normal; display: block; }
+.divider { height: 1px; background-color: #3f4147; margin: 12px 0; }
+h3 { font-size: 12px; color: white; margin-bottom: 8px; text-transform: uppercase; }
+.description { font-size: 14px; color: white; line-height: 1.4; margin-bottom: 16px; }
+
+.btn {
+    display: block; background-color: #4e5058; color: white;
+    text-align: center; padding: 10px; text-decoration: none;
+    border-radius: 4px; font-size: 14px; font-weight: 500;
+    transition: 0.2s;
+}
+.btn:hover { background-color: #6d6f78; }
